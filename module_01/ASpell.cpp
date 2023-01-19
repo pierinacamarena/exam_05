@@ -6,7 +6,7 @@
 /*   By: pierina <pierina@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:50:37 by pierina           #+#    #+#             */
-/*   Updated: 2023/01/19 17:18:27 by pierina          ###   ########.fr       */
+/*   Updated: 2023/01/19 17:19:49 by pierina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ASpell::ASpell() {}
 
 ASpell::ASpell(std::string const &name, std::string const &effects) : _name(name), _effects(effects) {}
 
-ASpell::ASpell(ASpell const & copy) : _name(copy._name), _effects(copy.getEffects())
+ASpell::ASpell(ASpell const & copy) : _name(copy._name), _effects(copy._effects)
 {
 	*this = copy;	
 }
