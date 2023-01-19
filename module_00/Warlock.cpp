@@ -6,13 +6,13 @@
 /*   By: pierina <pierina@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 15:09:07 by pierina           #+#    #+#             */
-/*   Updated: 2023/01/19 15:20:02 by pierina          ###   ########.fr       */
+/*   Updated: 2023/01/19 16:31:16 by pierina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Warlock.hpp"
 
-Warlock::Warlock(std::string name, std::string title) : _name(name), _title(title)
+Warlock::Warlock(std::string const &name, std::string const &title) : _name(name), _title(title)
 {
 	std::cout << _name << ": This looks like another boring day." << std::endl;
 }

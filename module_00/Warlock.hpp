@@ -6,7 +6,7 @@
 /*   By: pierina <pierina@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:44:19 by pierina           #+#    #+#             */
-/*   Updated: 2023/01/19 15:06:06 by pierina          ###   ########.fr       */
+/*   Updated: 2023/01/19 16:31:02 by pierina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Warlock {
 	public:
 
 		//Constructors and Destructors
-		Warlock(std::string name, std::string title);
+		Warlock(std::string const &name, std::string const &title);
 		~Warlock();
 
 
