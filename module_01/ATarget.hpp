@@ -6,7 +6,7 @@
 /*   By: pierina <pierina@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:17:40 by pierina           #+#    #+#             */
-/*   Updated: 2023/01/19 17:11:16 by pierina          ###   ########.fr       */
+/*   Updated: 2023/01/19 18:17:56 by pierina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class ATarget
 		std::string const &getType() const;
 
 		//pure method
-		virtual ATarget* clone() = 0;
+		virtual ATarget* clone() const = 0;
 
 		void getHitBySpell(ASpell const &aspell) const;
 		//test by adding const and removing const
