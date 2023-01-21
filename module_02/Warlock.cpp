@@ -6,7 +6,7 @@
 /*   By: pierina <pierina@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 15:09:07 by pierina           #+#    #+#             */
-/*   Updated: 2023/01/21 20:15:25 by pierina          ###   ########.fr       */
+/*   Updated: 2023/01/21 23:32:19 by pierina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,7 @@ Warlock::Warlock(std::string name, std::string title) : _name(name), _title(titl
 Warlock::~Warlock(void)
 {
 	std::cout << _name << ": My job here is done." << std::endl;
-	std::map<std::string, ASpell*>::iterator it = _spells.begin();
-	while(it != _spells.end())
-	{
-		delete it->second;
-		it++;
-	}
-	_spells.clear();
+	
 }
 
 std::string const &Warlock::getName() const
@@ -51,23 +45,23 @@ void Warlock::introduce(void) const
 
 void Warlock::learnSpell(ASpell *new_spell)
 {
-	if (new_spell)
-		_spells.insert(std::pair<std::string, ASpell*>(new_spell->getName(), new_spell->clone()));
+	_spellBook.learnSpell(new_spell);
 }
 
 void Warlock::forgetSpell(std::string spell_name)
 {
-	std::map<std::string, ASpell*>::iterator iter = _spells.find(spell_name);
-	if (iter != _spells.end())
-	{
-		delete iter->second;
-		_spells.erase(iter);
-	}
+	_spellBook.forgetSpell(spell_name);
 }
 
 void Warlock::launchSpell(std::string spell_name, ATarget const &atarget)
 {
-	std::map<std::string, ASpell*>::iterator iter = _spells.find(spell_name);
-	if (iter != _spells.end())
-		iter->second->launch(atarget);
+	ATarget const *test = NULL;
+
+	if (test == &atarget)
+	{
+		return;
+	}
+	ASpell *spell = _spellBook.createSpell(spell_name);
+	if (spell)
+		spell->launch(atarget);
 }

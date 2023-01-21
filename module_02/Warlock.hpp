@@ -6,7 +6,7 @@
 /*   By: pierina <pierina@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:44:19 by pierina           #+#    #+#             */
-/*   Updated: 2023/01/21 19:30:51 by pierina          ###   ########.fr       */
+/*   Updated: 2023/01/21 21:44:41 by pierina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,20 @@
 
 #include <iostream>
 #include <map>
+#include "SpellBook.hpp"
+
 
 class ATarget;
 class ASpell;
+
 
 class Warlock {
 	private:
 		//data attributes
 		std::string	_name;
 		std::string _title;
-		std::map<std::string, ASpell*> _spells;
+		SpellBook	_spellBook;
+		// std::map<std::string, ASpell*> _spells;
 		
 		//Constructors
 		Warlock();
@@ -57,5 +61,4 @@ class Warlock {
 
 #include "ASpell.hpp"
 #include "ATarget.hpp"
-
 #endif
