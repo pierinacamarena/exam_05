@@ -6,7 +6,7 @@
 /*   By: pierina <pierina@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 17:14:02 by pierina           #+#    #+#             */
-/*   Updated: 2023/01/19 17:24:05 by pierina          ###   ########.fr       */
+/*   Updated: 2023/01/21 20:16:08 by pierina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ std::string const &ATarget::getType() const
 
 void ATarget::getHitBySpell(ASpell const &aspell) const
 {
-	std::cout << _type << "has been " << aspell.getEffects() << "!" << std::endl;
+	std::cout << _type << " has been " << aspell.getEffects() << "!" << std::endl;
 }
